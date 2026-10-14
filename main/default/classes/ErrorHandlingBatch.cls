@@ -7,7 +7,7 @@ global class ErrorHandlingBatch implements Database.Batchable<SObject> {
         try {
             Integer i = 2 / 0;
         } catch (Exception e) {
-            for (Integer j = 0; j < 1; j++) {
+            for (Integer j = 0; j < 6; j++) {
                 Triton.log(Triton.t
                     .area(TritonTypes.Area.Accounts)
                     .exception(e)
