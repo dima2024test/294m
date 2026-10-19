@@ -11,7 +11,8 @@ trigger CaseTrigger on Case (before insert, before update) {
         for (Case c : Trigger.new) {
             Case oldCase = Trigger.oldMap.get(c.Id);
             if (c.Status == 'Closed' && oldCase.Status != 'Closed' && String.isBlank(c.Description)) {
-                c.Description = 'Closed without description';
+                
+                c.Description = 'Closed without description test2';
             }
         }
     }
